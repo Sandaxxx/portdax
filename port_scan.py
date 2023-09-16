@@ -2,8 +2,6 @@
 import socket
 import requests
 from colorama import Fore, Style, init
-from discord_webhook import DiscordWebhook, DiscordEmbed
-from colorama import init, Fore
 import os
 init()
 GREEN = Fore.GREEN
