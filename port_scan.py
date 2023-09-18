@@ -96,7 +96,6 @@ def scan_port(ip, port):
         except socket.error:
             print(f"{RED}[CLOSE] {YELLOW}> {BLUE}Port: {port}")
 
-# Obtient votre adresse IP
 my_ip = get_my_ip()
 
 print(banner)
@@ -106,13 +105,10 @@ port_end = int(input(f"{BLUE}[{RED}?{BLUE}] {RED}End port: {BLUE}"))
 
 os.system('cls')
 
-# Liste pour stocker les ports ouverts
 ports_ouverts = []
 
-# Scan des ports dans la plage spécifiée
 for port in range(port_start, port_end + 1):
     result = scan_port(my_ip, port)
     if result:
         ports_ouverts.append(result)
 
-# Créer un message pour Discord
